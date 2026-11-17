@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .animate-float { animation: float 3s ease-in-out infinite; }
+  .animate-shimmer { animation: shimmer 3s linear infinite; }
+  .animate-float-letter { animation: float-letter 6s ease-in-out infinite; }
+  .animate-book-tilt { animation: book-tilt 4s ease-in-out infinite; }
+  .animate-float-around { animation: float-around 10s ease-in-out infinite; }
+  .animate-float-drift { animation: float-drift 14s ease-in-out infinite; }
+}
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes fade-in-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes float-letter { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-40px) rotate(15deg); } }
+@keyframes book-tilt { 0%, 100% { transform: perspective(1000px) rotateX(15deg) rotateY(0deg); } 50% { transform: perspective(1000px) rotateX(20deg) rotateY(5deg); } }
+@keyframes float-around {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  25% { transform: translate3d(12px, -20px, 0) rotate(3deg) scale(1.05); }
+  50% { transform: translate3d(-10px, -36px, 0) rotate(-3deg) scale(0.96); }
+  75% { transform: translate3d(-18px, -14px, 0) rotate(2deg) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+}
+@keyframes float-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(-16px, -26px, 0) rotate(-4deg); }
+  66% { transform: translate3d(14px, -14px, 0) rotate(3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+.animate-fade-in-up { animation: fade-in-up 1s ease-out forwards; }
+
+@layer base {
+  :root {
+    --color-beige-canvas: #FAF8F5;
+    --color-beige-cream: #F5F5DC;
+    --color-beige-sand: #EAE0D5;
+    --color-beige-surface: #FFFDF9;
+    --color-beige-border: #DFD3C3;
+    --color-ink-primary: #2C1E16;
+    --color-ink-secondary: #4A3F37;
+    --color-ink-muted: #6B5D52;
+    --color-accent-taupe: #8C6D46;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF8F5;
+    color: #2C1E16;
+  }
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Light Beige Islamic Geometric Background Patterns */
+.bg-light-pattern {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(rgba(140, 109, 70, 0.12) 1.2px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-light-grid {
+  background-image: 
+    linear-gradient(to right, rgba(140, 109, 70, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(140, 109, 70, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-warm-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(234, 224, 213, 0.45) 0%, rgba(250, 248, 245, 0) 70%);
+}
+
+.bg-arabesque-light {
+  background-color: #FAF8F5;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(234, 224, 213, 0.35) 0%, transparent 60%);
+}
+
+/* Custom scrollbar for curricula and modals */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6C7B5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8A48E;
+}

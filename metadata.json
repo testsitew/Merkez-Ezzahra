@@ -1,0 +1,6 @@
+{
+  "name": "Merkez AlZahraa | Cours de Coran, Langue Arabe & Sciences Islamiques en Ligne",
+  "description": "Apprenez le Coran, le Tajweed, la langue arabe et les sciences islamiques en ligne avec le Merkez AlZahraa. Cours en groupe dès 3€/h, binôme 4€/h et individuel 5€/h.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
